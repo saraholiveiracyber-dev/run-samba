@@ -559,35 +559,52 @@ body {
 
 
 /* =========================================================
-   RODAPÉ
-   ========================================================= */
+   LINHA FINAL
+========================================================= */
 
-.obrigado-footer {
-    padding-top: 25px;
+.footer-bottom {
+    width: 100%;
 
-    border-top: 1px solid #eee;
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
+.footer-bottom p {
+    margin: 0;
 
-.obrigado-footer p {
-    margin-bottom: 6px;
+    color: #777;
 
-    color: #222;
+    font-size: 10px;
+    font-weight: 600;
 
-    font-size: 12px;
+    line-height: 1.5;
+}
 
+.footer-bottom strong {
+    color: #000000;
     font-weight: 800;
 }
 
 
-.obrigado-footer span {
-    color: #999;
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    font-size: 10px;
+@media (max-width: 600px) {
 
-    font-weight: 600;
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
 
-    letter-spacing: 1px;
 }
 
 

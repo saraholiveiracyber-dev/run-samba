@@ -608,13 +608,47 @@ a {
 ========================================================= */
 
 .site-footer {
-    padding: 0 20px 25px;
-    text-align: center;
+    width: min(680px, calc(100% - 40px));
+
+    margin: 0 auto 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
 }
 
 .site-footer p {
-    color: #4f4f4f;
-    font-size: 9px;
+    margin: 0;
+
+    color: #777;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+.site-footer strong {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        width: calc(100% - 28px);
+
+        flex-direction: column;
+        text-align: center;
+
+        gap: 8px;
+    }
+
 }
 
 /* =========================================================
@@ -703,4 +737,103 @@ a {
     .resultado {
         padding: 14px;
     }
+}
+/* =========================================================
+   NOVA INSCRIÇÃO
+========================================================= */
+
+.nova-inscricao {
+    margin-top: 22px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    text-align: center;
+}
+
+.nova-inscricao > span {
+    color: #8f8f8f;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.btn-fazer-inscricao {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgba(245, 196, 0, 0.35);
+    border-radius: 11px;
+
+    background: rgba(245, 196, 0, 0.06);
+
+    color: #f5c400;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 0.7px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-fazer-inscricao strong {
+    font-size: 20px;
+}
+
+.btn-fazer-inscricao:hover {
+    background: rgba(245, 196, 0, 0.12);
+
+    border-color: #f5c400;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   VOLTAR / NOVA CONSULTA
+========================================================= */
+
+.btn-voltar-consulta {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background: transparent;
+
+    border: 0;
+
+    color: #8f8f8f;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.btn-voltar-consulta:hover {
+    color: #f5c400;
 }

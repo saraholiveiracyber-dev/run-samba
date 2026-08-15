@@ -1,41 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulte sua inscrição e realize o pagamento da Run & Samba 2026.">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Consulte sua inscrição e realize o pagamento da Run & Samba 2026."
+    >
+
     <title>Pagar Inscrição | Run & Samba 2026</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/pagar-inscricao.css">
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/pagar-inscricao.css"
+    >
+
 </head>
+
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header class="pagar-header">
+
     <div class="pagar-header-inner">
-        <a href="index.html" class="pagar-logo" aria-label="Voltar para a página inicial">
-            <img src="img/logo.png" alt="Run & Samba" onerror="this.style.display='none'">
+
+        <a
+            href="index.html"
+            class="pagar-logo"
+            aria-label="Voltar para a página inicial"
+        >
+
+            <img
+                src="img/logo.png"
+                alt="Run & Samba"
+                onerror="this.style.display='none'"
+            >
 
             <div class="pagar-logo-texto">
-                <strong>RUN & <span>SAMBA</span></strong>
-                <small>2026</small>
+
+                <strong>
+                    RUN & <span>SAMBA</span>
+                </strong>
+
+                <small>
+                    2026
+                </small>
+
             </div>
+
         </a>
 
-        <a href="index.html" class="voltar-link">← Voltar</a>
+
+        <a
+            href="index.html"
+            class="voltar-link"
+        >
+            ← Voltar
+        </a>
+
     </div>
+
 </header>
+
+
+
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
 
 <main class="pagar-page">
 
     <section class="pagar-card">
 
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
         <div class="pagar-intro">
-            <span class="pagar-label">PAGAMENTO DA INSCRIÇÃO</span>
+
+            <span class="pagar-label">
+                PAGAMENTO DA INSCRIÇÃO
+            </span>
 
             <h1>
                 Finalize sua inscrição
@@ -45,14 +126,30 @@
                 Informe o CPF utilizado no cadastro para localizar
                 sua inscrição e acessar o pagamento.
             </p>
+
         </div>
 
-        <form id="formConsulta" class="consulta-box">
 
-            <label for="cpf">CPF</label>
+
+        <!-- =================================================
+             CONSULTA CPF
+        ================================================== -->
+
+        <form
+            id="formConsulta"
+            class="consulta-box"
+        >
+
+            <label for="cpf">
+                CPF
+            </label>
+
 
             <div class="input-wrap">
-                <span class="input-icon">#</span>
+
+                <span class="input-icon">
+                    #
+                </span>
 
                 <input
                     type="text"
@@ -64,58 +161,185 @@
                     autocomplete="off"
                     required
                 >
+
             </div>
 
-            <button type="submit" id="btnConsultar" class="btn-consultar">
-                <span>CONSULTAR INSCRIÇÃO</span>
-                <strong>→</strong>
+
+            <button
+                type="submit"
+                id="btnConsultar"
+                class="btn-consultar"
+            >
+
+                <span>
+                    CONSULTAR INSCRIÇÃO
+                </span>
+
+                <strong>
+                    →
+                </strong>
+
             </button>
 
-            <div id="mensagem" class="mensagem" aria-live="polite"></div>
+
+            <!-- MENSAGEM -->
+
+            <div
+                id="mensagem"
+                class="mensagem"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- =================================================
+                 NOVA INSCRIÇÃO
+            ================================================== -->
+
+            <div class="nova-inscricao">
+
+                <span>
+                    AINDA NÃO FEZ SUA INSCRIÇÃO?
+                </span>
+
+                <a
+                    href="inscricoes.html"
+                    class="btn-fazer-inscricao"
+                >
+
+                    <span>
+                        FAZER MINHA INSCRIÇÃO
+                    </span>
+
+                    <strong>
+                        →
+                    </strong>
+
+                </a>
+
+            </div>
+
         </form>
 
-        <div id="resultado" class="resultado" hidden>
+
+
+        <!-- =================================================
+             RESULTADO
+        ================================================== -->
+
+        <div
+            id="resultado"
+            class="resultado"
+            hidden
+        >
+
+
+            <!-- TOPO -->
 
             <div class="resultado-topo">
-                <span class="resultado-label">INSCRIÇÃO ENCONTRADA</span>
+
+                <span class="resultado-label">
+                    INSCRIÇÃO ENCONTRADA
+                </span>
 
                 <h2>
-                    Olá, <strong id="resultadoNome">—</strong>!
+                    Olá,
+                    <strong id="resultadoNome">
+                        —
+                    </strong>!
                 </h2>
 
                 <p>
-                    Confira seus dados antes de continuar para o pagamento.
+                    Confira seus dados antes de continuar
+                    para o pagamento.
                 </p>
+
             </div>
+
+
+
+            <!-- DADOS -->
 
             <div class="dados-inscricao">
 
-                <div class="dado">
-                    <small>CPF</small>
-                    <strong id="resultadoCPF">—</strong>
-                </div>
 
                 <div class="dado">
-                    <small>PERCURSO</small>
-                    <strong id="resultadoPercurso">—</strong>
+
+                    <small>
+                        CPF
+                    </small>
+
+                    <strong id="resultadoCPF">
+                        —
+                    </strong>
+
                 </div>
 
+
+
                 <div class="dado">
-                    <small>CAMISETA</small>
-                    <strong id="resultadoCamiseta">—</strong>
+
+                    <small>
+                        PERCURSO
+                    </small>
+
+                    <strong id="resultadoPercurso">
+                        —
+                    </strong>
+
                 </div>
+
+
+
+                <div class="dado">
+
+                    <small>
+                        CAMISETA
+                    </small>
+
+                    <strong id="resultadoCamiseta">
+                        —
+                    </strong>
+
+                </div>
+
+
 
                 <div class="dado destaque-valor">
-                    <small>VALOR DA INSCRIÇÃO</small>
-                    <strong id="resultadoValor">R$ —</strong>
+
+                    <small>
+                        VALOR DA INSCRIÇÃO
+                    </small>
+
+                    <strong id="resultadoValor">
+                        R$ —
+                    </strong>
+
                 </div>
 
             </div>
 
-            <div id="statusPagamento" class="status-pagamento">
-                <span class="status-dot">●</span>
-                <strong id="resultadoStatus">AGUARDANDO PAGAMENTO</strong>
+
+
+            <!-- STATUS -->
+
+            <div
+                id="statusPagamento"
+                class="status-pagamento"
+            >
+
+                <span class="status-dot">
+                    ●
+                </span>
+
+                <strong id="resultadoStatus">
+                    AGUARDANDO PAGAMENTO
+                </strong>
+
             </div>
+
+
+
+            <!-- PAGAMENTO -->
 
             <a
                 href="#"
@@ -124,42 +348,120 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <span>PAGAR MINHA INSCRIÇÃO</span>
-                <strong>→</strong>
+
+                <span>
+                    PAGAR MINHA INSCRIÇÃO
+                </span>
+
+                <strong>
+                    →
+                </strong>
+
             </a>
 
+
             <p class="aviso-pagamento">
-                🔒 Você será direcionado para a página segura de pagamento da Izy.
+                🔒 Você será direcionado para a página segura
+                de pagamento da Izy.
             </p>
 
+
+            <!-- VOLTAR PARA CONSULTA -->
+
+            <button
+                type="button"
+                class="btn-voltar-consulta"
+                onclick="location.reload()"
+            >
+                ← CONSULTAR OUTRO CPF
+            </button>
+
         </div>
+
+
+
+        <!-- =================================================
+             INFORMAÇÃO
+        ================================================== -->
 
         <div class="pagar-info">
-            <div class="info-icon">✓</div>
+
+            <div class="info-icon">
+                ✓
+            </div>
 
             <div>
-                <strong>Já possui uma inscrição?</strong>
+
+                <strong>
+                    Já possui uma inscrição?
+                </strong>
+
                 <p>
-                    Utilize exatamente o mesmo CPF informado durante o cadastro.
+                    Utilize exatamente o mesmo CPF informado
+                    durante o cadastro.
                 </p>
+
             </div>
+
         </div>
 
-        <footer class="pagar-footer">
-            <strong>RUN & SAMBA 2026</strong>
-            <span>ESPORTE • MÚSICA • EXPERIÊNCIA</span>
-        </footer>
 
-    </section>
 
-</main>
+        <!-- =================================================
+     FOOTER DO CARD
+================================================= -->
 
-<footer class="site-footer">
-    <p>© 2026 Run & Samba. Todos os direitos reservados.</p>
+<footer class="pagar-footer">
+
+    <strong>
+        RUN & SAMBA 2026
+    </strong>
+
+    <span>
+        ESPORTE • MÚSICA • EXPERIÊNCIA
+    </span>
+
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="js/pagar-inscricao.js"></script>
+
+<!-- =================================================
+     LINHA FINAL
+================================================= -->
+
+<footer class="site-footer">
+
+    <p>
+        © 2026 Run & Samba.
+        Todos os direitos reservados.
+    </p>
+
+    <p>
+        Desenvolvido por
+        <strong>
+            iDigital Agência
+        </strong>
+    </p>
+
+</footer>
+
+<!-- =====================================================
+     SUPABASE
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script
+    src="js/pagar-inscricao.js"
+></script>
+
 
 </body>
+
 </html>
