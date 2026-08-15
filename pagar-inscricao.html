@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulte sua inscrição e realize o pagamento da Run & Samba 2026.">
+    <title>Pagar Inscrição | Run & Samba 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/pagar-inscricao.css">
+</head>
+
+<body>
+
+<header class="pagar-header">
+    <div class="pagar-header-inner">
+        <a href="index.html" class="pagar-logo" aria-label="Voltar para a página inicial">
+            <img src="img/logo.png" alt="Run & Samba" onerror="this.style.display='none'">
+
+            <div class="pagar-logo-texto">
+                <strong>RUN & <span>SAMBA</span></strong>
+                <small>2026</small>
+            </div>
+        </a>
+
+        <a href="index.html" class="voltar-link">← Voltar</a>
+    </div>
+</header>
+
+<main class="pagar-page">
+
+    <section class="pagar-card">
+
+        <div class="pagar-intro">
+            <span class="pagar-label">PAGAMENTO DA INSCRIÇÃO</span>
+
+            <h1>
+                Finalize sua inscrição
+            </h1>
+
+            <p>
+                Informe o CPF utilizado no cadastro para localizar
+                sua inscrição e acessar o pagamento.
+            </p>
+        </div>
+
+        <form id="formConsulta" class="consulta-box">
+
+            <label for="cpf">CPF</label>
+
+            <div class="input-wrap">
+                <span class="input-icon">#</span>
+
+                <input
+                    type="text"
+                    id="cpf"
+                    name="cpf"
+                    placeholder="000.000.000-00"
+                    inputmode="numeric"
+                    maxlength="14"
+                    autocomplete="off"
+                    required
+                >
+            </div>
+
+            <button type="submit" id="btnConsultar" class="btn-consultar">
+                <span>CONSULTAR INSCRIÇÃO</span>
+                <strong>→</strong>
+            </button>
+
+            <div id="mensagem" class="mensagem" aria-live="polite"></div>
+        </form>
+
+        <div id="resultado" class="resultado" hidden>
+
+            <div class="resultado-topo">
+                <span class="resultado-label">INSCRIÇÃO ENCONTRADA</span>
+
+                <h2>
+                    Olá, <strong id="resultadoNome">—</strong>!
+                </h2>
+
+                <p>
+                    Confira seus dados antes de continuar para o pagamento.
+                </p>
+            </div>
+
+            <div class="dados-inscricao">
+
+                <div class="dado">
+                    <small>CPF</small>
+                    <strong id="resultadoCPF">—</strong>
+                </div>
+
+                <div class="dado">
+                    <small>PERCURSO</small>
+                    <strong id="resultadoPercurso">—</strong>
+                </div>
+
+                <div class="dado">
+                    <small>CAMISETA</small>
+                    <strong id="resultadoCamiseta">—</strong>
+                </div>
+
+                <div class="dado destaque-valor">
+                    <small>VALOR DA INSCRIÇÃO</small>
+                    <strong id="resultadoValor">R$ —</strong>
+                </div>
+
+            </div>
+
+            <div id="statusPagamento" class="status-pagamento">
+                <span class="status-dot">●</span>
+                <strong id="resultadoStatus">AGUARDANDO PAGAMENTO</strong>
+            </div>
+
+            <a
+                href="#"
+                id="btnPagamento"
+                class="btn-pagamento"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>PAGAR MINHA INSCRIÇÃO</span>
+                <strong>→</strong>
+            </a>
+
+            <p class="aviso-pagamento">
+                🔒 Você será direcionado para a página segura de pagamento da Izy.
+            </p>
+
+        </div>
+
+        <div class="pagar-info">
+            <div class="info-icon">✓</div>
+
+            <div>
+                <strong>Já possui uma inscrição?</strong>
+                <p>
+                    Utilize exatamente o mesmo CPF informado durante o cadastro.
+                </p>
+            </div>
+        </div>
+
+        <footer class="pagar-footer">
+            <strong>RUN & SAMBA 2026</strong>
+            <span>ESPORTE • MÚSICA • EXPERIÊNCIA</span>
+        </footer>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 Run & Samba. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/pagar-inscricao.js"></script>
+
+</body>
+</html>
